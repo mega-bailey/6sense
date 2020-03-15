@@ -1,0 +1,142 @@
+$white: #fcfcfc;
+$black: #000;
+$color-primary: #252525;
+$color-accent: #fe5f55;
+
+$font-primary: 'Work Sans', 'sans-serif';
+
+// ***** MEDIA BREAKPOINTS ***** //
+$bp-largest: 75em; //1200px
+$bp-large: 62.5em; //1000px
+$bp-medium: 50em; //800px
+$bp-small: 37.5em; //600px
+$bp-xsmall: 25em; //400px
+
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+html {
+  font-size: 62.5%;
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 56.25%;
+  }
+  @media only screen and (max-width: $bp-small) {
+    font-size: 50%;
+  }
+}
+body {
+  box-sizing: border-box;
+  background-color: $white;
+  font-family: $font-primary;
+  color: $color-primary;
+}
+
+.navbar {
+  background-color: $color-accent;
+}
+
+.heading-primary {
+  font-size: 15rem;
+  font-weight: 100;
+  text-transform: lowercase;
+}
+.heading-secondary {
+  font-weight: 300;
+  font-size: 3rem;
+}
+
+.line {
+  margin-top: 1rem;
+  &--1 {
+    margin-top: 2rem;
+    border: 1px solid $color-primary;
+    width: 65%;
+  }
+  &--2 {
+    border: 1px solid rgba($color-primary, 0.8);
+    width: 55%;
+  }
+  &--3 {
+    border: 1px solid rgba($color-primary, 0.6);
+    width: 48%;
+  }
+  &--4 {
+    border: 1px solid rgba($color-primary, 0.5);
+    width: 40%;
+  }
+  &--5 {
+    border: 1px solid rgba($color-primary, 0.4);
+    width: 25%;
+  }
+  &--6 {
+    border: 1px solid rgba($color-primary, 0.2);
+    width: 18%;
+  }
+}
+
+.header {
+  height: 65vh;
+  &__text-box {
+    display: flex;
+    height: 80%;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    margin-right: 15rem;
+  }
+  &__img-container {
+    width: 33%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    padding: 5rem;
+  }
+  &__bottle-img {
+    display: block;
+    height: 36rem;
+  }
+}
+
+.shop {
+  padding: 1rem 0;
+  &__flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.item {
+  &__container {
+    width: 30%;
+    height: 100%;
+    background-color: #252525;
+    padding: 5rem;
+    margin: 15px;
+    @media only screen and (max-width: $bp-large) {
+      padding: 2.5rem;
+    }
+    @media only screen and (max-width: $bp-medium) {
+      padding: 1rem;
+    }
+    @media only screen and (max-width: $bp-small) {
+      padding: 5px;
+    }
+  }
+  &__img {
+    max-width: 100%;
+  }
+}
+.footer {
+  background-color: lightblue;
+  height: 30vh;
+}
+
+.popup {
+  height: 80vh;
+  background-color: black;
+}
