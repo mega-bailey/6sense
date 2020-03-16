@@ -44,7 +44,7 @@ body {
   justify-content: space-between;
   align-items: center;
   &--icon {
-    padding: 1rem 0 0 1.5rem;
+    padding: 1.5rem 0 0 2rem;
     font-size: 3rem;
     font-weight: 100;
     position: relative;
@@ -54,19 +54,128 @@ body {
       width: 3rem;
       background-color: $color-primary;
       position: absolute;
-      left: 9px;
+      left: 14px;
       bottom: 0;
     }
   }
 }
-.lnr-cart {
-  font-size: 4rem;
-  padding: 1rem 1.5rem 0 0;
+
+//********* CART SECTION *********//
+
+.bg-overlay {
+  // visibility: hidden;
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba($color-primary, 0.8);
 }
+
+.heading-tertiary {
+  font-weight: 300;
+  text-transform: lowercase;
+  font-size: 2.5rem;
+  padding: 4rem 2rem;
+}
+
+.lnr-cart {
+  font-size: 3rem;
+  padding: 1.5rem 2rem 0 0;
+}
+.lnr-cross {
+  font-size: 3rem;
+  padding: 1.5rem 0 0 2rem;
+  position: fixed;
+  top: 0;
+  right: 10px;
+}
+
+.cart {
+  z-index: 20;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 35%;
+  height: 100vh;
+  background-color: $white;
+  &__item {
+    &--top-row {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    &--bottom-row {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding-bottom: 4rem;
+    }
+    &--img {
+      width: 15rem;
+      height: 15rem;
+      box-shadow: 0 5px 5px rgba($color-primary, 0.4);
+    }
+    &--title {
+      font-weight: 300;
+      font-size: 1.7rem;
+      text-transform: lowercase;
+    }
+    &--price {
+      font-weight: 300;
+      font-size: 1.7rem;
+    }
+    &--remove {
+      cursor: pointer;
+      font-weight: 300;
+      font-size: 1.2rem;
+    }
+    &--icon {
+      cursor: pointer;
+      font-size: 1.2rem;
+      padding: 0 10px;
+    }
+    &--quantity {
+      font-weight: 300;
+      font-size: 1.5rem;
+    }
+  }
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &--checkoutBtn {
+    cursor: pointer;
+    padding: 1rem 2rem;
+    font-family: $font-primary;
+    text-transform: lowercase;
+    margin-top: 4rem;
+    font-size: 1.7rem;
+    font-weight: 300;
+    border: none;
+    border-bottom: 1px solid $color-primary;
+    color: $color-primary;
+    background-color: $white;
+    transition: 0.2s ease;
+    outline: none;
+    &:hover {
+      background-color: $color-primary;
+      color: $white;
+    }
+    &:active {
+      outline: none;
+    }
+  }
+}
+
 //********* HEADER SECTION *********//
 .header {
   display: flex;
   justify-content: space-around;
+  align-items: center;
   width: 100%;
   padding: 5rem;
   &__text-box {
@@ -74,10 +183,6 @@ body {
     height: 80%;
     flex-direction: column;
     align-items: flex-end;
-    justify-content: center;
-  }
-  &__img-container {
-    display: flex;
     justify-content: center;
   }
   &__bottle-img {
@@ -89,7 +194,6 @@ body {
   font-size: 15rem;
   font-weight: 100;
   text-transform: lowercase;
-  padding-top: 2rem;
 }
 .heading-secondary {
   font-weight: 300;
@@ -110,6 +214,9 @@ body {
 //********* ITEMS *********//
 .item {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   &__container {
     cursor: pointer;
     width: 30%;
@@ -131,20 +238,15 @@ body {
     max-width: 100%;
   }
   &__details {
-    z-index: -10;
+    z-index: 10;
     position: absolute;
-    top: 25%;
-    right: 32%;
     transition: 0.2s ease;
     transform: translateY(101%);
     opacity: 0;
-    z-index: 10;
     display: flex;
     flex-direction: column;
     align-items: center;
-    &:hover {
-      opacity: 1;
-    }
+    justify-content: center;
 
     &--title {
       color: $white;
@@ -158,6 +260,7 @@ body {
       font-weight: 100;
     }
     &--buyBtn {
+      cursor: pointer;
       font-family: $font-primary;
       text-transform: lowercase;
       font-size: 1.5rem;
@@ -168,6 +271,9 @@ body {
       outline: none;
       border: none;
       background-color: $color-secondary;
+      &:hover {
+        opacity: 1;
+      }
     }
   }
 }
@@ -270,12 +376,22 @@ body {
 }
 .btn {
   &--join {
-    padding: 1rem 2.5rem;
+    cursor: pointer;
+    padding: 1rem 2rem;
     font-family: $font-primary;
+    text-transform: lowercase;
+    margin-right: 1rem;
+    font-size: 1.7rem;
+    font-weight: 300;
+    border: none;
+    border-bottom: 1px solid $color-primary;
+    color: $color-primary;
+    background-color: $white;
+    transition: 0.2s ease;
+  }
+  &:hover {
     background-color: $color-primary;
     color: $white;
-    border-radius: 3px;
-    margin-right: 1rem;
   }
   &:active {
     outline: none;
@@ -287,7 +403,7 @@ body {
   &__container {
     width: 30%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding: 5rem;
     font-size: 1.7rem;
     font-weight: 300;

@@ -1,3 +1,9 @@
 const item = document.querySelector('.item');
 
-// item.addEventListener('click', )
+const buyBtn = document.querySelector('.item__details--buyBtn');
+
+// buyBtn.addEventListener('click', logIt());
+
+function logIt() {
+  console.log('clicked');
+}

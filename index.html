@@ -58,6 +58,13 @@
         </article>
         <article class="item__container">
           <div class="item">
+            <div class="item__details ">
+              <div class="item__details--title ">Oceanic</div>
+              <div class="item__details--price ">$115</div>
+              <button class="item__details--buyBtn ">
+                Add to cart
+              </button>
+            </div>
             <img
               src="dist/img/oceanic.png"
               alt="Oceanic Scent"
@@ -67,6 +74,13 @@
         </article>
         <article class="item__container">
           <div class="item">
+            <div class="item__details ">
+              <div class="item__details--title ">Oriental</div>
+              <div class="item__details--price ">$85</div>
+              <button class="item__details--buyBtn ">
+                Add to cart
+              </button>
+            </div>
             <img
               src="dist/img/oriental.png"
               alt="Oriental Scent"
@@ -76,16 +90,37 @@
         </article>
         <article class="item__container">
           <div class="item">
+            <div class="item__details ">
+              <div class="item__details--title ">Spice</div>
+              <div class="item__details--price ">$95</div>
+              <button class="item__details--buyBtn ">
+                Add to cart
+              </button>
+            </div>
             <img src="dist/img/spice.png" alt="Spice Scent" class="item__img" />
           </div>
         </article>
         <article class="item__container">
           <div class="item">
+            <div class="item__details ">
+              <div class="item__details--title ">Woody</div>
+              <div class="item__details--price ">$85</div>
+              <button class="item__details--buyBtn ">
+                Add to cart
+              </button>
+            </div>
             <img src="dist/img/woody.png" alt="Woody Scent" class="item__img" />
           </div>
         </article>
         <article class="item__container">
           <div class="item">
+            <div class="item__details ">
+              <div class="item__details--title ">Citrus</div>
+              <div class="item__details--price ">$105</div>
+              <button class="item__details--buyBtn ">
+                Add to cart
+              </button>
+            </div>
             <img
               src="dist/img/citrus.png"
               alt="Citrus Scent"
@@ -95,6 +130,13 @@
         </article>
         <article class="item__container">
           <div class="item">
+            <div class="item__details ">
+              <div class="item__details--title ">Sample Set</div>
+              <div class="item__details--price ">$55</div>
+              <button class="item__details--buyBtn ">
+                Add to cart
+              </button>
+            </div>
             <img
               src="dist/img/sampler.png"
               alt="Sampler Set"
@@ -104,6 +146,13 @@
         </article>
         <article class="item__container">
           <div class="item">
+            <div class="item__details ">
+              <div class="item__details--title ">Gift Card</div>
+              <div class="item__details--price ">$100</div>
+              <button class="item__details--buyBtn" onclick="logIt()">
+                Add to cart
+              </button>
+            </div>
             <img
               src="dist/img/gift-card.png"
               alt="Gift Card"
@@ -114,6 +163,12 @@
 
         <article class="item__container">
           <div class="item">
+            <div class="item__details ">
+              <div class="item__details--title ">Questions?</div>
+              <button class="item__details--buyBtn ">
+                Contact Us
+              </button>
+            </div>
             <img
               src="dist/img/contact.png"
               alt="Contact Person"
@@ -123,6 +178,43 @@
         </article>
       </div>
     </section>
+
+    <!-- SHOPPING CART -->
+    <div class="bg-overlay">
+      <div class="cart">
+        <span class="lnr lnr-cross"></span>
+        <h3 class="heading-tertiary">Your Cart</h3>
+        <div class="cart__content">
+          <!-- START OF JS -->
+          <div class="cart__item">
+            <div class="cart__item--top-row">
+              <img
+                src="dist/img/green.png"
+                alt="cart item"
+                class="cart__item--img"
+              />
+              <h4 class="cart__item--title">Green fragrance • 50ML</h4>
+              <h5 class="cart__item--price">$85</h5>
+            </div>
+            <div class="cart__item--bottom-row">
+              <span class="cart__item--remove">remove</span>
+              <i class="cart__item--icon lnr lnr-chevron-up"></i>
+              <span class="cart__item--quantity">1</span>
+              <i class="cart__item--icon lnr lnr-chevron-down"></i>
+            </div>
+          </div>
+          <!-- END OF JS -->
+          <div class="cart__bottom">
+            <h3 class="heading-tertiary">
+              Subtotal: $<span class="cart-total">0</span>
+            </h3>
+            <button class="cart--checkoutBtn ">
+              Checkout
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- FOOTER -->
     <footer class="footer">
@@ -185,5 +277,6 @@
       </div>
       <p class="footer__copyright">© 6•sense, 2020</p>
     </footer>
+    <script src="app.js"></script>
   </body>
 </html>

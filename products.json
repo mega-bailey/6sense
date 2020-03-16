@@ -1,0 +1,69 @@
+{
+  "items": [
+    {
+      "sys": { "id": "1" },
+      "fields": {
+        "title": "green fragrance • 50ml",
+        "price": 85,
+        "image": { "fields": { "file": { "url": "dist/img/green.png" } } }
+      }
+    },
+    {
+      "sys": { "id": "2" },
+      "fields": {
+        "title": "oceanic fragrance",
+        "price": 115,
+        "image": { "fields": { "file": { "url": "dist/img/oceanic.png" } } }
+      }
+    },
+    {
+      "sys": { "id": "3" },
+      "fields": {
+        "title": "oriental fragrance",
+        "price": 85,
+        "image": { "fields": { "file": { "url": "dist/img/oriental.png" } } }
+      }
+    },
+    {
+      "sys": { "id": "4" },
+      "fields": {
+        "title": "spice fragrance",
+        "price": 95,
+        "image": { "fields": { "file": { "url": "dist/img/spice.png" } } }
+      }
+    },
+    {
+      "sys": { "id": "5" },
+      "fields": {
+        "title": "woody fragrance",
+        "price": 85,
+        "image": { "fields": { "file": { "url": "dist/img/woody.png" } } }
+      }
+    },
+    {
+      "sys": { "id": "6" },
+      "fields": {
+        "title": "citrus fragrance",
+        "price": 105,
+        "image": { "fields": { "file": { "url": "dist/img/citrus.png" } } }
+      }
+    },
+    {
+      "sys": { "id": "7" },
+      "fields": {
+        "title": "sample set",
+        "price": 55,
+        "image": { "fields": { "file": { "url": "dist/img/sampler.png" } } }
+      }
+    },
+
+    {
+      "sys": { "id": "8" },
+      "fields": {
+        "title": "gift card",
+        "price": 100,
+        "image": { "fields": { "file": { "url": "dist/img/gift-card.png" } } }
+      }
+    }
+  ]
+}
