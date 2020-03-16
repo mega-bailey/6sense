@@ -7,13 +7,20 @@
       href="https://fonts.googleapis.com/css?family=Work+Sans:100,300,400,700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css"
+    />
     <link rel="stylesheet" href="dist/css/style.min.css" />
     <title>Six Sense</title>
   </head>
   <body>
+    <!-- NAVBAR -->
     <nav class="navbar">
-      Navbar
+      <p class="navbar--icon">6</p>
+      <span class="lnr lnr-cart"></span>
     </nav>
+    <!-- HEADER -->
     <header class="header">
       <div class="header__img-container">
         <img
@@ -27,23 +34,26 @@
         <h2 class="heading-secondary">
           Six unique and earthy unisex fragrances
         </h2>
-        <hr class="line line--1" />
-        <hr class="line  line--2" />
-        <hr class="line line--3" />
-        <hr class="line line--4" />
-        <hr class="line line--5" />
-        <hr class="line line--6" />
-        <!-- <div class="line--1 line--2">&nbsp;</div>
-        <div class="line--3 line--4">&nbsp;</div>
-        <div class="line--5 line--6">&nbsp;</div> -->
       </div>
     </header>
 
+    <!-- PRODUCTS -->
     <section class="shop">
       <div class="shop__flex-container">
-        <article class="item__container">
-          <div class="item">
-            <img src="dist/img/green.png" alt="Green Scent" class="item__img" />
+        <article class="item__container ">
+          <div class="item ">
+            <div class="item__details ">
+              <div class="item__details--title ">Green</div>
+              <div class="item__details--price ">$85</div>
+              <button class="item__details--buyBtn ">
+                Add to cart
+              </button>
+            </div>
+            <img
+              src="dist/img/green.png"
+              alt="Green Scent"
+              class="item__img "
+            />
           </div>
         </article>
         <article class="item__container">
@@ -114,18 +124,66 @@
       </div>
     </section>
 
+    <!-- FOOTER -->
     <footer class="footer">
-      Footer
-    </footer>
+      <div class="footer__top-container">
+        <div class="social__container">
+          <div class="social__paragraph">
+            Follow us:
+          </div>
+          <div class="social__link-container">
+            <ul class="social__links">
+              <li><a href="#" class="social__link"> Instagram</a></li>
+              <li><a href="#" class="social__link"> Facebook</a></li>
+              <li><a href="#" class="social__link"> Twitter</a></li>
+            </ul>
+          </div>
+        </div>
+        <h2 class="footer__logo">6•Sense</h2>
 
-    <div class="popup">
-      Popup
-    </div>
+        <div class="footer__form form">
+          <form action="#popup-form">
+            <div class="row">
+              <div class="form-group1">
+                <input
+                  type="text"
+                  class="contact__input"
+                  placeholder="Full name"
+                  id="name"
+                  required
+                />
+                <label for="name" class="form__label">Full name</label>
+              </div>
+
+              <div class="form-group2">
+                <input
+                  type="email"
+                  class="contact__input"
+                  placeholder="Email address"
+                  id="email"
+                  required
+                />
+                <label for="email" class="form__label">Email address</label>
+                <button type="submit" class="btn btn--join">
+                  Join
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer__bottom-container">
+        <ul class="footer__nav-list">
+          <li><a href="#" class="footer__nav-link">Stores</a></li>
+          <li><a href="#" class="footer__nav-link">Shipping & Returns </a></li>
+          <li><a href="#" class="footer__nav-link">Privacy Policy</a></li>
+          <li><a href="#" class="footer__nav-link">Careers</a></li>
+          <li><a href="#" class="footer__nav-link">Press</a></li>
+          <li><a href="#" class="footer__nav-link">Contact</a></li>
+        </ul>
+      </div>
+      <p class="footer__copyright">© 6•sense, 2020</p>
+    </footer>
   </body>
 </html>
-<!-- <link
-  href="https://fonts.googleapis.com/css?family=Allura|Cinzel+Decorative|Julius+Sans+One|Meddon&display=swap"
-  rel="stylesheet"
-/> -->
-
-<!-- //https://www.liveabout.com/types-of-perfume-346103 -->
