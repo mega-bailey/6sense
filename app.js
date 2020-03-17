@@ -100,23 +100,24 @@ class UI {
   addCartItem(item) {
     const div = document.createElement('div');
     div.classList.add('cart__item');
-    div.innerHTML = `<div class="cart__item">
-    <div class="cart__item--top-row">
-      <img
-        src=${item.image}
-        alt="cart item"
-        class="cart__item--img"
-      />
-      <h4 class="cart__item--name">${item.name} ${item.detail}</h4>
-      <h5 class="cart__item--price">$${item.price}</h5>
-    </div>
-    <div class="cart__item--bottom-row">
-      <span class="cart__item--remove" data-id=${item.id}>remove</span>
-      <i class="cart__item--icon lnr lnr-chevron-up"data-id=${item.id}></i>
-      <span class="cart__item--quantity">${item.amount}</span>
-      <i class="cart__item--icon lnr lnr-chevron-down"data-id=${item.id}></i>
-    </div>
-  </div>`;
+    div.innerHTML = `
+        <div class="cart__item--top-row">
+          <img
+            src=${item.image}
+            alt="cart item"
+            class="cart__item--img"
+          />
+          <h4 class="cart__item--name">${item.name} ${item.detail}</h4>
+          <h5 class="cart__item--price">$${item.price}</h5>
+          
+        </div>
+        <div class="cart__item--bottom-row">
+        <span class="cart__item--remove" data-id=${item.id}>remove</span>
+          <i class="cart__item--icon lnr lnr-chevron-up"data-id=${item.id}></i>
+          <p class="cart__item--quantity">${item.amount}</p>
+          <i class="cart__item--icon lnr lnr-chevron-down"data-id=${item.id}></i>
+        </div>
+     `;
     cartContent.appendChild(div);
   }
   openCart() {
@@ -186,8 +187,8 @@ class UI {
     this.setCartValues(cart);
     Storage.saveCart(cart);
     let button = this.getSingleButton(id);
-    button.diabled = false;
-    button.innerHTML = `Add to cart`; //this is probably wrong
+    button.disabled = false;
+    button.innerHTML = `Add to cart`;
   }
   getSingleButton(id) {
     return buttonsEl.find(button => button.dataset.id === id);

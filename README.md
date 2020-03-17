@@ -1,3 +1,3 @@
 # 6sense
 
-Ecommerce site for perfume
+Ecommerce site for fragrance products
