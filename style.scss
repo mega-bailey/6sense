@@ -394,6 +394,7 @@ body {
       padding: 5px;
       background-color: rgba($color-primary, 0.1);
       border: none;
+      display: block;
       border-bottom: 1px solid $color-primary;
       width: 100%;
       &::-webkit-input-placeholder {
