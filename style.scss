@@ -257,6 +257,9 @@ body {
   font-weight: 300;
   text-transform: lowercase;
   font-size: 2.5rem;
+  @media only screen and (max-width: $bp-xsmall) {
+    font-size: 1.8rem;
+  }
 }
 
 //********* SHOP SECTION *********//
@@ -363,7 +366,7 @@ body {
   &__top-container {
     margin: 7rem 0;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-around;
     align-items: center;
     @media only screen and (max-width: $bp-small) {
       flex-direction: column;
@@ -381,51 +384,31 @@ body {
   //********* SIGN UP FORM *********//
 
   .form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 50%;
-    &__label {
-      font-size: 1px;
-      opacity: 0;
-      visibility: hidden;
-      border: none;
-      outline: none;
-    }
-    @media only screen and (max-width: $bp-small) {
-      margin: 4rem;
-      align-items: center;
-    }
-  }
-  .contact {
     &__input {
-      width: 60%;
+      // display: flex;
+      // flex-direction: column;
+      // justify-content: center;
+      // align-items: center;
       outline: none;
-      border: none;
-      margin: 3px;
-      background-color: $white;
-      font-family: $font-primary;
       font-size: 1.7rem;
+      font-family: $font-primary;
       font-weight: 300;
       text-transform: lowercase;
+      color: inherit;
+      padding: 5px 0;
+      background-color: $white;
+      border: none;
       border-bottom: 1px solid $color-primary;
-      transition: all 0.2s ease-out;
-      &::placeholder {
+      width: 100%;
+      &::-webkit-input-placeholder {
         color: $color-primary;
-      }
-      &:focus {
-        outline: none;
-        color: $color-primary;
-        &::placeholder {
-          color: $color-primary;
-        }
       }
       @media only screen and (max-width: $bp-medium) {
         font-size: 2rem;
       }
-      @media only screen and (max-width: $bp-small) {
-        width: 120%;
-      }
+    }
+    &__label {
+      opacity: 0;
     }
   }
   .btn {
@@ -434,8 +417,7 @@ body {
       padding: 1rem;
       font-family: $font-primary;
       text-transform: lowercase;
-      margin-left: 5px;
-      font-size: 1.4rem;
+      font-size: 1.5rem;
       font-weight: 300;
       border: none;
       border-bottom: 1px solid $color-primary;
