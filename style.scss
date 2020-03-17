@@ -2,6 +2,7 @@ $white: #fcfcfc;
 $black: #000;
 $color-primary: #252525;
 $color-secondary: #d2dbc5;
+$color-accent: #fc5e44;
 
 $font-primary: 'Work Sans', 'sans-serif';
 
@@ -41,18 +42,24 @@ body {
 //********* NAVBAR *********//
 .navbar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: $color-primary;
+  padding-bottom: 1rem;
   &--icon {
-    padding: 1.5rem 0 0 2rem;
+    padding: 1rem 0 0 2rem;
     font-size: 3rem;
     font-weight: 100;
+    color: $white;
     position: relative;
     &:after {
       content: '';
       height: 1px;
       width: 3rem;
-      background-color: $color-primary;
+      background-color: $white;
       position: absolute;
       left: 14px;
       bottom: 0;
@@ -63,14 +70,17 @@ body {
 //********* CART SECTION *********//
 
 .bg-overlay {
-  // visibility: hidden;
+  visibility: hidden;
   z-index: 10;
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
   height: 100%;
   width: 100%;
   background-color: rgba($color-primary, 0.8);
+}
+.visible-overlay {
+  visibility: visible;
 }
 
 .heading-tertiary {
@@ -83,8 +93,21 @@ body {
 .lnr-cart {
   font-size: 3rem;
   padding: 1.5rem 2rem 0 0;
+  position: absolute;
+  right: 0;
+  color: $white;
 }
-.lnr-cross {
+.cart-quantity {
+  position: absolute;
+  top: 7px;
+  right: 1rem;
+  background-color: $color-accent;
+  padding: 2px 4px;
+  font-size: 1.3rem;
+  font-weight: 400;
+  border-radius: 10px;
+}
+.close-cart {
   font-size: 3rem;
   padding: 1.5rem 0 0 2rem;
   position: fixed;
@@ -93,13 +116,16 @@ body {
 }
 
 .cart {
+  transition: all 0.2s ease;
+  transform: translateX(100%);
   z-index: 20;
   position: fixed;
   top: 0;
   right: 0;
-  width: 35%;
+  width: 45%;
   height: 100vh;
   background-color: $white;
+  overflow: scroll;
   &__item {
     &--top-row {
       display: flex;
@@ -117,7 +143,7 @@ body {
       height: 15rem;
       box-shadow: 0 5px 5px rgba($color-primary, 0.4);
     }
-    &--title {
+    &--name {
       font-weight: 300;
       font-size: 1.7rem;
       text-transform: lowercase;
@@ -147,12 +173,12 @@ body {
     justify-content: center;
     align-items: center;
   }
-  &--checkoutBtn {
+  &--clear-btn {
     cursor: pointer;
     padding: 1rem 2rem;
     font-family: $font-primary;
     text-transform: lowercase;
-    margin-top: 4rem;
+    margin: 4rem 0;
     font-size: 1.7rem;
     font-weight: 300;
     border: none;
@@ -171,13 +197,18 @@ body {
   }
 }
 
+.openCart {
+  transform: translateX(0);
+}
+
 //********* HEADER SECTION *********//
 .header {
   display: flex;
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  padding: 5rem;
+  padding: 10rem 5rem 8rem 5rem;
+
   &__text-box {
     display: flex;
     height: 80%;
@@ -248,7 +279,7 @@ body {
     align-items: center;
     justify-content: center;
 
-    &--title {
+    &--name {
       color: $white;
       font-size: 5rem;
       font-weight: 100;
@@ -267,10 +298,10 @@ body {
       font-weight: 300;
       margin-top: 3rem;
       padding: 1.3rem 1.8rem;
-      border-radius: 3px;
       outline: none;
       border: none;
       background-color: $color-secondary;
+      color: $color-primary;
       &:hover {
         opacity: 1;
       }
@@ -311,27 +342,36 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: $black;
+  }
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   &__nav-list {
     display: flex;
     list-style: none;
+    padding-top: 2rem;
   }
   &__nav-link {
     text-decoration: none;
     text-transform: lowercase;
     font-size: 1.4rem;
     font-weight: 100;
-    color: $color-primary;
+    color: $white;
     margin-right: 10px;
     &:hover {
-      color: rgba($color-primary, 0.9);
-      border-bottom: 1px solid $color-primary;
+      color: rgba($white, 0.9);
+      border-bottom: 1px solid $white;
     }
   }
   &__copyright {
     font-size: 1.2rem;
+    font-weight: 100;
     text-align: center;
     padding: 4rem 0;
+    color: $white;
   }
 }
 

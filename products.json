@@ -3,7 +3,8 @@
     {
       "sys": { "id": "1" },
       "fields": {
-        "title": "green fragrance • 50ml",
+        "name": "green",
+        "detail": "fragrance • 50ml",
         "price": 85,
         "image": { "fields": { "file": { "url": "dist/img/green.png" } } }
       }
@@ -11,7 +12,8 @@
     {
       "sys": { "id": "2" },
       "fields": {
-        "title": "oceanic fragrance",
+        "name": "oceanic",
+        "detail": "fragrance • 50ml",
         "price": 115,
         "image": { "fields": { "file": { "url": "dist/img/oceanic.png" } } }
       }
@@ -19,7 +21,8 @@
     {
       "sys": { "id": "3" },
       "fields": {
-        "title": "oriental fragrance",
+        "name": "oriental",
+        "detail": "fragrance • 50ml",
         "price": 85,
         "image": { "fields": { "file": { "url": "dist/img/oriental.png" } } }
       }
@@ -27,7 +30,8 @@
     {
       "sys": { "id": "4" },
       "fields": {
-        "title": "spice fragrance",
+        "name": "spice",
+        "detail": "fragrance • 50ml",
         "price": 95,
         "image": { "fields": { "file": { "url": "dist/img/spice.png" } } }
       }
@@ -35,7 +39,8 @@
     {
       "sys": { "id": "5" },
       "fields": {
-        "title": "woody fragrance",
+        "name": "woody",
+        "detail": "fragrance • 50ml",
         "price": 85,
         "image": { "fields": { "file": { "url": "dist/img/woody.png" } } }
       }
@@ -43,7 +48,8 @@
     {
       "sys": { "id": "6" },
       "fields": {
-        "title": "citrus fragrance",
+        "name": "citrus",
+        "detail": "fragrance • 50ml",
         "price": 105,
         "image": { "fields": { "file": { "url": "dist/img/citrus.png" } } }
       }
@@ -51,7 +57,8 @@
     {
       "sys": { "id": "7" },
       "fields": {
-        "title": "sample set",
+        "name": "sample set",
+        "detail": " • 6 x 1.5ml",
         "price": 55,
         "image": { "fields": { "file": { "url": "dist/img/sampler.png" } } }
       }
@@ -60,9 +67,19 @@
     {
       "sys": { "id": "8" },
       "fields": {
-        "title": "gift card",
+        "name": "gift card",
+        "detail": "reloadable",
         "price": 100,
         "image": { "fields": { "file": { "url": "dist/img/gift-card.png" } } }
+      }
+    },
+    {
+      "sys": { "id": "9" },
+      "fields": {
+        "name": "personalize",
+        "detail": "fragrance • 50ml",
+        "price": 250,
+        "image": { "fields": { "file": { "url": "dist/img/contact.png" } } }
       }
     }
   ]

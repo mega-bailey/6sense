@@ -19,7 +19,9 @@
     <nav class="navbar">
       <p class="navbar--icon">6</p>
       <span class="lnr lnr-cart"></span>
+      <div class="cart-quantity">0</div>
     </nav>
+
     <!-- HEADER -->
     <header class="header">
       <div class="header__img-container">
@@ -40,12 +42,12 @@
     <!-- PRODUCTS -->
     <section class="shop">
       <div class="shop__flex-container">
-        <article class="item__container ">
+        <!-- <article class="item__container ">
           <div class="item ">
             <div class="item__details ">
-              <div class="item__details--title ">Green</div>
+              <div class="item__details--name ">Green</div>
               <div class="item__details--price ">$85</div>
-              <button class="item__details--buyBtn ">
+              <button class="item__details--buyBtn bagBtn">
                 Add to cart
               </button>
             </div>
@@ -59,9 +61,9 @@
         <article class="item__container">
           <div class="item">
             <div class="item__details ">
-              <div class="item__details--title ">Oceanic</div>
+              <div class="item__details--name ">Oceanic</div>
               <div class="item__details--price ">$115</div>
-              <button class="item__details--buyBtn ">
+              <button class="item__details--buyBtn bagBtn">
                 Add to cart
               </button>
             </div>
@@ -75,9 +77,9 @@
         <article class="item__container">
           <div class="item">
             <div class="item__details ">
-              <div class="item__details--title ">Oriental</div>
+              <div class="item__details--name ">Oriental</div>
               <div class="item__details--price ">$85</div>
-              <button class="item__details--buyBtn ">
+              <button class="item__details--buyBtn bagBtn">
                 Add to cart
               </button>
             </div>
@@ -91,9 +93,9 @@
         <article class="item__container">
           <div class="item">
             <div class="item__details ">
-              <div class="item__details--title ">Spice</div>
+              <div class="item__details--name ">Spice</div>
               <div class="item__details--price ">$95</div>
-              <button class="item__details--buyBtn ">
+              <button class="item__details--buyBtn bagBtn">
                 Add to cart
               </button>
             </div>
@@ -103,9 +105,9 @@
         <article class="item__container">
           <div class="item">
             <div class="item__details ">
-              <div class="item__details--title ">Woody</div>
+              <div class="item__details--name ">Woody</div>
               <div class="item__details--price ">$85</div>
-              <button class="item__details--buyBtn ">
+              <button class="item__details--buyBtn bagBtn">
                 Add to cart
               </button>
             </div>
@@ -115,9 +117,9 @@
         <article class="item__container">
           <div class="item">
             <div class="item__details ">
-              <div class="item__details--title ">Citrus</div>
+              <div class="item__details--name ">Citrus</div>
               <div class="item__details--price ">$105</div>
-              <button class="item__details--buyBtn ">
+              <button class="item__details--buyBtn bagBtn">
                 Add to cart
               </button>
             </div>
@@ -131,9 +133,9 @@
         <article class="item__container">
           <div class="item">
             <div class="item__details ">
-              <div class="item__details--title ">Sample Set</div>
+              <div class="item__details--name ">Sample Set</div>
               <div class="item__details--price ">$55</div>
-              <button class="item__details--buyBtn ">
+              <button class="item__details--buyBtn bagBtn">
                 Add to cart
               </button>
             </div>
@@ -147,9 +149,9 @@
         <article class="item__container">
           <div class="item">
             <div class="item__details ">
-              <div class="item__details--title ">Gift Card</div>
+              <div class="item__details--name ">Gift Card</div>
               <div class="item__details--price ">$100</div>
-              <button class="item__details--buyBtn" onclick="logIt()">
+              <button class="item__details--buyBtn bagBtn">
                 Add to cart
               </button>
             </div>
@@ -161,11 +163,11 @@
           </div>
         </article>
 
-        <article class="item__container">
+         <article class="item__container">
           <div class="item">
             <div class="item__details ">
-              <div class="item__details--title ">Questions?</div>
-              <button class="item__details--buyBtn ">
+              <div class="item__details--name ">Questions?</div>
+              <button class="item__details--buyBtn bagBtn">
                 Contact Us
               </button>
             </div>
@@ -175,25 +177,25 @@
               class="item__img"
             />
           </div>
-        </article>
+        </article>  -->
       </div>
     </section>
 
-    <!-- SHOPPING CART -->
+    <!-- CART -->
     <div class="bg-overlay">
       <div class="cart">
-        <span class="lnr lnr-cross"></span>
+        <span class="close-cart"> <i class="lnr lnr-cross"></i> </span>
         <h3 class="heading-tertiary">Your Cart</h3>
         <div class="cart__content">
           <!-- START OF JS -->
-          <div class="cart__item">
+          <!-- <div class="cart__item">
             <div class="cart__item--top-row">
               <img
                 src="dist/img/green.png"
                 alt="cart item"
                 class="cart__item--img"
               />
-              <h4 class="cart__item--title">Green fragrance • 50ML</h4>
+              <h4 class="cart__item--name">Green fragrance • 50ML</h4>
               <h5 class="cart__item--price">$85</h5>
             </div>
             <div class="cart__item--bottom-row">
@@ -203,15 +205,16 @@
               <i class="cart__item--icon lnr lnr-chevron-down"></i>
             </div>
           </div>
+        </div> -->
           <!-- END OF JS -->
-          <div class="cart__bottom">
-            <h3 class="heading-tertiary">
-              Subtotal: $<span class="cart-total">0</span>
-            </h3>
-            <button class="cart--checkoutBtn ">
-              Checkout
-            </button>
-          </div>
+        </div>
+        <div class="cart__bottom">
+          <h3 class="heading-tertiary">
+            Subtotal: $<span class="cart-total">0</span>
+          </h3>
+          <button class="cart--clear-btn">
+            Clear Cart
+          </button>
         </div>
       </div>
     </div>
@@ -266,16 +269,23 @@
       </div>
 
       <div class="footer__bottom-container">
-        <ul class="footer__nav-list">
-          <li><a href="#" class="footer__nav-link">Stores</a></li>
-          <li><a href="#" class="footer__nav-link">Shipping & Returns </a></li>
-          <li><a href="#" class="footer__nav-link">Privacy Policy</a></li>
-          <li><a href="#" class="footer__nav-link">Careers</a></li>
-          <li><a href="#" class="footer__nav-link">Press</a></li>
-          <li><a href="#" class="footer__nav-link">Contact</a></li>
-        </ul>
+        <div class="footer__nav">
+          <ul class="footer__nav-list">
+            <li><a href="#" class="footer__nav-link">Stores</a></li>
+            <li>
+              <a href="#" class="footer__nav-link">Shipping & Returns </a>
+            </li>
+            <li><a href="#" class="footer__nav-link">Privacy Policy</a></li>
+            <li><a href="#" class="footer__nav-link">Careers</a></li>
+            <li><a href="#" class="footer__nav-link">Press</a></li>
+            <li><a href="#" class="footer__nav-link">Contact</a></li>
+          </ul>
+
+          <div class="footer__copyright">
+            <p class="footer__copyright--text">© 6•sense, 2020</p>
+          </div>
+        </div>
       </div>
-      <p class="footer__copyright">© 6•sense, 2020</p>
     </footer>
     <script src="app.js"></script>
   </body>
