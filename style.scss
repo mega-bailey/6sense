@@ -59,6 +59,9 @@ body {
     border-bottom: 1px solid $white;
   }
 }
+.navbar > a {
+  text-decoration: none;
+}
 
 //********* CART SECTION *********//
 
@@ -384,6 +387,12 @@ body {
 
   .form {
     margin-left: 5rem;
+    @media only screen and (max-width: $bp-small) {
+      margin-left: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
     &__input {
       font-size: 1.7rem;
       font-family: $font-primary;
@@ -404,8 +413,8 @@ body {
       }
       @media only screen and (max-width: $bp-medium) {
         font-size: 2rem;
-        margin-left: 0;
       }
+
       &:focus {
         outline: none;
       }
@@ -451,12 +460,14 @@ body {
         font-size: 2rem;
       }
       @media only screen and (max-width: $bp-small) {
-        margin-top: 5rem;
+        margin-top: 6rem;
         margin-right: 0;
+        flex-direction: column;
       }
     }
     &__text {
       margin-right: 15px;
+      font-weight: 400;
     }
     &__links {
       list-style: none;
