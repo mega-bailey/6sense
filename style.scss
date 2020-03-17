@@ -9,9 +9,9 @@ $font-primary: 'Work Sans', 'sans-serif';
 // ***** MEDIA BREAKPOINTS ***** //
 $bp-largest: 75em; //1200px
 $bp-large: 62.5em; //1000px
-$bp-medium: 50em; //800px
-$bp-small: 37.5em; //600px
-$bp-xsmall: 25em; //400px
+$bp-medium: 56.25em; //900px
+$bp-small: 50em; //800px
+$bp-xsmall: 37.5em; //600px
 
 *,
 *:before,
@@ -50,20 +50,13 @@ body {
   background-color: $color-primary;
   padding-bottom: 1rem;
   &--icon {
-    padding: 1rem 0 0 2rem;
+    margin: 1rem 0 0 2rem;
+    padding: 0 3px;
     font-size: 3rem;
     font-weight: 100;
     color: $white;
     position: relative;
-    &:after {
-      content: '';
-      height: 1px;
-      width: 3rem;
-      background-color: $white;
-      position: absolute;
-      left: 14px;
-      bottom: 0;
-    }
+    border-bottom: 1px solid $white;
   }
 }
 
@@ -122,10 +115,13 @@ body {
   position: fixed;
   top: 0;
   right: 0;
-  width: 45%;
+  width: 47%;
   height: 100vh;
   background-color: $white;
   overflow: scroll;
+  @media only screen and (max-width: $bp-large) {
+    width: 60%;
+  }
   &__item {
     &--top-row {
       display: flex;
@@ -208,6 +204,9 @@ body {
   align-items: center;
   width: 100%;
   padding: 10rem 5rem 8rem 5rem;
+  @media only screen and (max-width: $bp-xsmall) {
+    flex-direction: column;
+  }
 
   &__text-box {
     display: flex;
@@ -219,6 +218,12 @@ body {
   &__bottle-img {
     display: block;
     height: 36rem;
+    @media only screen and (max-width: $bp-medium) {
+      height: 30rem;
+    }
+    @media only screen and (max-width: $bp-xsmall) {
+      height: 25rem;
+    }
   }
 }
 .heading-primary {
@@ -284,11 +289,17 @@ body {
       font-size: 5rem;
       font-weight: 100;
       text-transform: lowercase;
+      @media only screen and (max-width: $bp-small) {
+        font-size: 3.5rem;
+      }
     }
     &--price {
       color: $white;
       font-size: 3rem;
       font-weight: 100;
+      @media only screen and (max-width: $bp-small) {
+        font-size: 2.5rem;
+      }
     }
     &--buyBtn {
       cursor: pointer;
@@ -323,7 +334,7 @@ body {
 //********* FOOTER TOP SECTION *********//
 .footer {
   &__top-container {
-    padding: 5rem;
+    padding: 5rem 0;
     font-size: 1.7rem;
     font-weight: 300;
     text-transform: lowercase;
@@ -335,6 +346,9 @@ body {
     font-weight: 100;
     font-size: 6rem;
     justify-content: center;
+    @media only screen and (max-width: $bp-medium) {
+      font-size: 4rem;
+    }
   }
 
   //********* FOOTER BOTTOM LINKS *********//
@@ -378,12 +392,14 @@ body {
 //********* SIGN UP FORM *********//
 
 .form {
+  width: 28%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+
   &__label {
-    font-size: 1.2rem;
-    margin-left: 2rem;
+    font-size: 1px;
+
     transition: all 0.3s;
     opacity: 0;
     visibility: hidden;
@@ -392,9 +408,8 @@ body {
 }
 .contact {
   &__input {
-    padding: 5px;
     border: none;
-    margin: 0.5rem;
+    margin: 3px;
     background-color: $white;
     font-family: $font-primary;
     font-size: 1.7rem;
@@ -417,11 +432,11 @@ body {
 .btn {
   &--join {
     cursor: pointer;
-    padding: 1rem 2rem;
+    padding: 1rem;
     font-family: $font-primary;
     text-transform: lowercase;
-    margin-right: 1rem;
-    font-size: 1.7rem;
+    margin-left: 5px;
+    font-size: 1.4rem;
     font-weight: 300;
     border: none;
     border-bottom: 1px solid $color-primary;
@@ -447,6 +462,9 @@ body {
     padding: 5rem;
     font-size: 1.7rem;
     font-weight: 300;
+    @media only screen and (max-width: $bp-medium) {
+      padding: 5rem 0;
+    }
   }
 
   &__links {
