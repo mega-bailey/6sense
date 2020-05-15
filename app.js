@@ -1,7 +1,6 @@
 const openCartBtn = document.querySelector('.lnr-cart');
 const closeCartBtn = document.querySelector('.close-cart');
-const cartQty = document.querySelector('.cart-quantity'); //cart-items
-//above is cartItems
+const cartQty = document.querySelector('.cart-quantity');
 
 const cartEl = document.querySelector('.cart');
 const productsEl = document.querySelector('.shop__flex-container');

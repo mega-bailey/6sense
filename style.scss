@@ -302,7 +302,7 @@ body {
   &__details {
     z-index: 10;
     position: absolute;
-    transition: 0.2s ease;
+    transition: all 0.4s ease-out;
     transform: translateY(101%);
     opacity: 0;
     display: flex;
@@ -344,9 +344,11 @@ body {
       padding: 1.3rem 1.8rem;
       outline: none;
       border: none;
-      background-color: $color-secondary;
+      background-color: rgba($color-secondary, 0.8);
       color: $color-primary;
+      transition: all 0.2s ease-out;
       &:hover {
+        background-color: $color-secondary;
         opacity: 1;
       }
     }
@@ -435,7 +437,7 @@ body {
       border-bottom: 1px solid $color-primary;
       color: $color-primary;
       background-color: $white;
-      transition: 0.2s ease;
+      transition: all 0.3s ease-out;
     }
     &:hover {
       background-color: $color-primary;
@@ -476,7 +478,7 @@ body {
       color: $color-primary;
       text-decoration: none;
       position: relative;
-      transition: 0.2s ease;
+      transition: all 0.4s ease-out;
       &:hover {
         color: rgba($color-primary, 0.9);
         border-bottom: 1px solid $color-primary;
@@ -509,6 +511,7 @@ body {
     font-weight: 100;
     color: $white;
     margin-right: 10px;
+    transition: all 0.2s ease-out;
     &:hover {
       color: rgba($white, 0.9);
       border-bottom: 1px solid $white;
